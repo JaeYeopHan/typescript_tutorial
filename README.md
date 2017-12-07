@@ -8,6 +8,7 @@
 TypeScript Tutorial 문서를 저장하는 repository 입니다.
 
 ## Table of contents
+* [TypeScript 개발환경 세팅하기](https://github.com/JaeYeopHan/typescript_playground)
 * [0. Quick Start](https://github.com/JaeYeopHan/typescript_tutorial_docs/blob/master/00_quick_start.md)
 * [1. Basic Types](https://github.com/JaeYeopHan/typescript_tutorial_docs/blob/master/01_basic_types.md)
 
