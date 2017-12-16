@@ -31,16 +31,15 @@ function getMonthFromString(dateOfStringFormat) {
 ```
 parameter가 넘어오지 않을 경우 NPE를 방지하기 위해 해당하는 방어코드 또한 추가해줬습니다. (이는 바로 다음 section에서 다룰 default parameter를 통해서도 해결할 수 있습니다.) 기본적으로 함수가 수행해야하는 비즈니스 로직 외 불필요한 방어코드가 코드를 더럽히고 있습니다.
 
-
 위 함수를 TypeScript 함수로 변경해보겠습니다.
 
-```ts
+```js
 const getMonth = (date: string): number => {
   return parseInt(date.substring(4, 6), 10);
-}
+};
 ```
 인자와 반환값에 타입을 설정하여 메소드 이름과 변수명이 훨씬 짧아졌습니다. 그럼에도 불구하고 해당 함수가 하는 역할을 ES6로 작성했을 때보다 명확해졌으며, 불필요한 방어코드 마저 사라졌습니다.
-[wtfjs]()에서 확인하실 수 있지만 자바스크립트에서는 타입이 멋대로(사실은 매우 다양한 규칙을 기반으로) 캐스팅되는 경우가 많은데요, 이를 방지하기 위해 우리는 불필요한 방어코드를 작성해왔습니다. 타입을 지정함으로써 이러한 작업을 최소화 할 수 있습니다.
+[wtfjs](https://github.com/denysdovhan/wtfjs)에서 확인하실 수 있지만 자바스크립트에서는 타입이 멋대로(사실은 매우 다양한 규칙을 기반으로) 캐스팅되는 경우가 많은데요, 이를 방지하기 위해 우리는 불필요한 방어코드를 작성해왔습니다. 타입을 지정함으로써 이러한 작업을 최소화 할 수 있습니다.
 
 </br>
 
@@ -52,23 +51,21 @@ const getMonth = (date: string): number => {
 TypeScript에서도 해당 스펙을 지원합니다.
 _Default parameter TypeScript code_
 ```ts
-// MathUtils.ts
-export const getRandomNumber = (min: number = 0, max: number = 10): number => {
+const getRandomNumber = (min: number = 0, max: number = 10): number => {
     return Math.floor(Math.random() * (max - min)) + min;
-}
+};
 
-// Controller.ts
 console.log(getRandomNumber(1)); // OK!
 ```
 위 코드에서는 인자가 넘겨지지 않았을 경우(undefined), 지정해준 값으로 인자를 설정합니다. 명시적으로 `null`을 인자로 넘겨주면 default로 설정된 parameter를 무시하고 `null`을 인자로 넘깁니다. 지정한 인자를 모두 넘기지 않으면 에러를 뱉던 TypeScript도 default parameter가 지정되어 있으면 에러를 발생시키지 않습니다.
 
 _Rest parameter TypeScript code_
 ```ts
-export const setSkills = (...skills: string[]): void => {
+const setSkills = (...skills: string[]): void => {
     // ...
-}
+};
 ```
-`rest parameter`의 타입은 배열(array)이므로 인자에 해당하는 타입을 설정해줍니다.
+`rest parameter`의 타입은 배열(array)이므로 인자에 배열에 해당하는 타입을 설정해줍니다.
 
 </br>
 
@@ -78,7 +75,7 @@ TypeScript에서는 default parameter 없을 경우, signature로 정의한대�
 const setSpec = (major: string, option?: string): void => {
   console.log(major);
   console.log(option);
-}
+};
 setSpec("Computer Science");
 // console> Computer Science
 // console> undefined
@@ -101,7 +98,7 @@ sayName(position: string | boolean | number): void {
   }
 }
 ```
-위 코드에서는 `position`이라는 파라미터가 `string`, `boolean`, `number` 세 가지의 타입일 수 있다고 signature를 지정했습니다. (예제가 송구스럽네요)
+위 코드에서는 `position`이라는 파라미터가 `string`, `boolean`, `number` 세 가지의 타입일 수 있다고 signature를 지정했습니다. (예제가 송구스럽네요.)
 
 </br>
 
@@ -126,7 +123,7 @@ class Person {
 }
 ```
 위와 같이 메소드를 정의할 수 있다. `sayName`이라는 메소드의 signature가 세 개인 것을 확인할 수 있다. 이를 호출하면 어떻게 될까?
-```ts
+```ts index.ts
 const person: Person = new Person();
 
 person.sayName("FrontEnd");
