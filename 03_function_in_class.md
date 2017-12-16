@@ -122,7 +122,7 @@ class Person {
   //..
 }
 ```
-위와 같이 메소드를 정의할 수 있다. `sayName`이라는 메소드의 signature가 세 개인 것을 확인할 수 있다. 이를 호출하면 어떻게 될까?
+위와 같이 메소드를 정의할 수 있다. `sayName`이라는 메소드의 signature가 세 개인 것을 확인할 수 있습니다. 이를 호출하면 어떻게 될까요?
 ```ts index.ts
 const person: Person = new Person();
 
@@ -132,13 +132,12 @@ person.sayName(false, "option required");
 // person.sayName(true); Error! (1)
 // person.sayName(1); Error! (2)
 ```
-메소드를 호출하는 시점에서 각 상황에 맞는 signature가 적용된다. `Error (1)`을 보면 `boolean` 타입이 인자로 넘어갔을 경우의 signature에 따라 `option`이 `required` 인자이므로 에러가 발생한다. `Error (2)`는 어느 signature와도 일치하지 않으니 에러가 발생한다. 이렇게 TypeScript에서는 여러 signature를 정의한 뒤 메소드 내에서 이를 분기하여 오버로딩을 구현할 수 있다.
+메소드를 호출하는 시점에서 각 상황에 맞는 signature가 적용됩니다. `Error (1)`을 보면 `boolean` 타입이 인자로 넘어갔을 경우의 signature에 따라 `option`이 `required` 인자이므로 에러가 발생하게 됩니다. `Error (2)`는 어느 signature와도 일치하지 않으니 에러가 발생합니다. 이렇게 TypeScript에서는 여러 signature를 정의한 뒤 메소드 내에서 이를 분기하여 오버로딩을 구현할 수 있습니다.
 
 </br>
 
 ### 마무리
-TypeScript 좀 더 안정성 있는, 간결한, 가독성이 좋은 함수를 작성할 수 있게 되었다.
-
+TypeScript 좀 더 안정성 있는, 간결한, 가독성이 좋은 함수를 작성할 수 있게 되었습니다.s`
 
 해당 포스팅 외 다른 타입스크립트 포스팅은 [여기](https://github.com/JaeYeopHan/typescript_tutorial_docs)에서 보실 수 있으며 예제에 사용된 코드는 [여기](https://github.com/JaeYeopHan/typescript_playground)에서 확인하실 수 있습니다.
 감사합니다.
