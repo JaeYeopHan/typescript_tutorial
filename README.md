@@ -12,6 +12,8 @@ TypeScript Tutorial 문서를 저장하는 repository 입니다.
 * [0. Quick Start](https://github.com/JaeYeopHan/typescript_tutorial_docs/blob/master/00_quick_start.md)
 * [1. Basic Types](https://github.com/JaeYeopHan/typescript_tutorial_docs/blob/master/01_basic_types.md)
 * [2. Class]()
+* [3. Function]()
+* [4. Interface]()
 
 ## Author
 [Jbee](http://friendly-belief.surge.sh/)
