@@ -4,7 +4,7 @@
 
 </div>
 
-# TypeScript tutorial
+# Intro to TypeScript in 15 minutes
 TypeScript Tutorial 문서를 저장하는 repository 입니다.
 
 ## Table of contents
