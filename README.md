@@ -14,6 +14,7 @@ TypeScript Tutorial 문서를 저장하는 repository 입니다.
 * [2. Class](https://github.com/JaeYeopHan/typescript_tutorial_docs/blob/master/02_class.md)
 * [3. Function](https://github.com/JaeYeopHan/typescript_tutorial_docs/blob/master/03_Function_in_TypeScript.md)
 * [4. Interface](https://github.com/JaeYeopHan/typescript_tutorial_docs/blob/master/04_interface.md)
+* [5. Generics](https://github.com/JaeYeopHan/intro_to_typescript/blob/master/05_generics.md)
 
 ## Author
 [Jbee](http://friendly-belief.surge.sh/)
