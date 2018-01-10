@@ -1,29 +1,20 @@
 # [TS] 1. Basic Types
-TypeScript에서는 JavaScript에서 사용했었던 `number`, `string`, `boolean`과 같은 데이터 타입을 기반으로 `정적 타이핑`을 지원합니다.
+TypeScript에서는 JavaScript에서 사용했었던 `number`, `string`, `boolean`과 같은 데이터 타입을 기반으로 `정적 타이핑`을 지원합니다. 변수에 타입을 지정해주기 위해서 TypeScript에서는 `:`을 통해 지원합니다. 기존의 JavaScript에서 변수를 선언하면서 `:`으로 해당 변수의 타입을 지정해줍니다.
 
-본격적인 TypeScript Tutorial 진행을 위해 에디터에 `TSLint`를 설치하겠습니다. (TypeScript에서 제공하는 [Playground](https://www.typescriptlang.org/play/index.html)에서 해보실 수도 있습니다.)
-## Install TSLint
-```bash
-yarn global add tslint typescript
-yarn global tslint typescript
-```
-`typescript`패키지는 `TSLint`와 동일한 version을 사용해야 하기 때문에 `peerDependencies`로 설치해줍니다.
-작업할 디렉토리로 이동하여 `tslint`를 설정해줍니다.
-```bash
-tslint --init
-```
-위 명령어를 실행하게 되면 `tslint.json`이라는 파일이 생성됩니다.
-```json
-{
-    "defaultSeverity": "error",
-    "extends": "tslint:recommended"
-}
-```
-기본적으로 `tslint`에서 제공하는 `recommended` rule을 적용했습니다. 저는 `WebStorm`이라는 에디터를 사용하고 있습니다. 각자 사용하는 에디터에서 환경설정을 통해 TSLint를 able로 설정해주시면 됩니다. TSLint에서 제공하고 있는 rule은 [공식 사이트](http://palantir.github.io/tslint/rules/)에서 제공하고 있습니다. 입맛에 맞게 해당 rule들을 오버라이딩하여 사용하실 수 있습니다. (`WebStorm`에서는 console찍는 것 가지고 뭐라 안하는데, 다른 editor에서는 console마저 지우라고 하는 것 같습니다. `no-console` rule을 설정하시는게 정신 건강에 좋을 것 같습니다.) 보다 자세한 `tslint.json` 설정은 다음 링크를 참고하시면 좋을 것 같습니다. MicroSoft가 만든 `VSCode` 에디터가 요즘 뜨고 있는데요, `VSCode` 에디터에 TypeScript 개발 환경 설정하는 내용을 포함하고 있습니다. [Visual Studio Code에서의 TypeScript 개발 환경 구축](http://poiemaweb.com/typescript-vscode)
+### Table of Contents
+- Boolean
+- Number
+- String
+- Array
+- Tuple
+- Enum
+- Any
+- Void
+- Null, Undefined
+- Never
+- Type Assertion
 
-
-## Basic Types
-변수에 타입을 지정해주기 위해서 TypeScript에서는 `:`을 통해 지원합니다. 기존의 JavaScript에서 변수를 선언하면서 `:`으로 해당 변수의 타입을 지정해줍니다.
+</br>
 
 ### Boolean
 ```typescript
