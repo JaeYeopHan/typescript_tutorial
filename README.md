@@ -8,7 +8,7 @@
 TypeScript Tutorial 문서를 저장하는 repository 입니다.
 
 ### Table of All Contents
-- [Basic Types](#[ts]-1.-basic-types)
+- Basic Types
   - Boolean
   - Number
   - String
@@ -22,7 +22,7 @@ TypeScript Tutorial 문서를 저장하는 repository 입니다.
   - Type Assertion
 - Class
   - Constructor
-  - extend를 통한 상속
+  - extend
   - Access Modifier
     - public
     - private
