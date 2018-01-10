@@ -1,7 +1,4 @@
-# [TS] 3. Function in TypeScript
-
-[< 이전: Class in TypeScript <](https://jaeyeophan.github.io/2017/12/13/TS-2-Class/)
-
+# [TS] 3. Function in TypeScri
 TypeScript에서 함수를 정의하는데 있어서 몇 가지 추가된 기능에 대해 살펴봅니다.
 
 #### Table of Contents
@@ -17,10 +14,10 @@ _ES6 code_
 ```js
 function getMonthFromString(dateOfStringFormat) {
   const monthOfNumberFormat = parseInt(dateOfStringFormat.substring(4, 6), 10);
-	return monthOfNumberFormat;
+  return monthOfNumberFormat;
 }
 ```
-위 함수는 '201712'이라는 문자열을 받아서 해당하는 월을 반환하는 함수입니다. (반환값의 형식을 명시하기 위해 바로 return하지 않고 변수에 임시로 받아준 뒤 반환합니다.) 위와 같이 String 타입의 인자를 받아야 한다는 것을 명시해줘야 하기 때문에 변수명부터 굉장히 장황해집니다. 자바스크립트에는 타입이라는 것이 없기 때문에 메소드명 또는 변수명에 타입을 명시할 수 밖에 없습니다.
+위 함수는 '201712'이라는 문자열을 받아서 해당하는 월을 반환하는 함수입니다. (반환값의 형식을 명시하기 위해 바로 return하지 않고 변수에 임시로 받아준 뒤 반환합니다.) 위와 같이 String 타입의 인자를 받아야 한다는 것을 명시해줘야 하기 때문에 변수명부터 굉장히 이상해집니다. 자바스크립트에는 타입이라는 것이 없기 때문에 메소드명 또는 변수명에 타입을 명시할 수 밖에 없습니다.
 
 만약 Number 타입의 201712를 인자로 넘겨준다면 Number에는 substring이라는 함수가 없기 때문에 에러가 발생합니다. 위 함수를 보다 안정적으로 작성하기 위해서는 다음과 같은 if 문이 필요하게 됩니다.
 ```js
@@ -29,7 +26,7 @@ function getMonthFromString(dateOfStringFormat) {
     throw Error("Invalid format of parameter");
   }
   const monthOfNumberFormat = parseInt(dateOfStringFormat.substring(4, 6), 10);
-	return monthOfNumberFormat;
+  return monthOfNumberFormat;
 }
 ```
 기본적으로 함수가 수행해야하는 비즈니스 로직 외 불필요한 방어코드가 코드를 더럽히고 있습니다. 위 함수를 TypeScript 함수로 변경해보겠습니다.
@@ -40,7 +37,7 @@ const getMonth = (date: string): number => {
 }
 ```
 인자와 반환값에 타입을 설정하여 메소드 이름과 변수명이 훨씬 짧아졌습니다. 그럼에도 불구하고 해당 함수가 하는 역할을 ES6로 작성했을 때보다 명확해졌으며, 불필요한 방어코드 마저 사라졌습니다.
-[wtfjs](https://github.com/denysdovhan/wtfjs)에서 확인하실 수 있지만 자바스크립트에서는 타입이 멋대로(사실은 매우 다양한 규칙을 기반으로) 형변환되는 경우가 많습니다. 다양하고 독창적인 암시적 형변환으로 개발자를 괴롭게 하는데요, 이를 방지하기 위해 우리는 불필요한 방어코드를 작성해왔습니다. 타입을 지정함으로써 이러한 작업을 최소화 할 수 있습니다.
+[wtfjs](https://github.com/denysdovhan/wtfjs)에서 확인하실 수 있지만 자바스크립트에서는 타입이 멋대로(사실은 매우 다양한 규칙을 기반으로) 캐스팅되는 경우가 많은데요, 이를 방지하기 위해 우리는 불필요한 방어코드를 작성해왔습니다. 타입을 지정함으로써 이러한 작업을 최소화 할 수 있습니다.
 
 </br>
 
@@ -104,7 +101,7 @@ sayName(position: string | boolean | number): void {
 </br>
 
 ## Overloading
-바로 이전 [Class 포스팅]에서 자바와 같은 오버로딩을 지원하지 않는다고 했는데요, `optional parameter`와 `union type` 그리고 `any`라는 타입을 사용하면 자바에서 구현하는 것과는 조금 다르지만 오버로딩을 구현할 수 있습니다.
+바로 이전 [Class 포스팅](https://jaeyeophan.github.io/2017/12/13/TS-2-Class/)에서 자바와 같은 오버로딩을 지원하지 않는다고 했는데요, `optional parameter`와 `union type` 그리고 `any`라는 타입을 사용하면 자바에서 구현하는 것과는 조금 다르지만 오버로딩을 구현할 수 있습니다.
 
 ```ts Person.ts
 class Person {

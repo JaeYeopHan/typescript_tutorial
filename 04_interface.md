@@ -30,7 +30,7 @@ export async function fetchBasic(param: {url: string}): Promise<Response> {
   return response.json();
 }
 ```
-위와 같이 `param`이라는 인자의 타입을 literal 형식으로 정의할 수 있습니다. 그런데 그 객체의 프로퍼티가 많아지는 경우에는 어떻게 정의할까요? (반환값에 `Promise<?>`형식으로 지정을 해줬는데요, 이는 Generics 부분에서 다룰 예정입니다.)
+위와 같이 `param`이라는 인자의 타입을 literal 형식으로 정의할 수 있습니다. 그런데 그 객체의 프로퍼티가 많아지는 경우에는 어떻게 정의할까요? (반환값 형식에 `Promise<?>`형식으로 지정을 해줬는데요, 이는 Generics 부분에서 다룰 예정입니다.)
 
 ```ts
 export async function fetchData(param: {baseUrl: string, type: string, subject?: string}): Promise<Response> {
@@ -105,6 +105,7 @@ export async function fetchData(param: fetchDataParam): Promise<dataFormat> {
 ```ts
 // Controller.ts
 import { fetchDataParam, dataFormat } from "./interfaces";
+
 private async ajaxCall(): Promise<dataFormat> {
   const param: fetchDataParam = {
     baseUrl: "http://localhost:3000",
@@ -171,16 +172,18 @@ const buildTimeStamp: TimeFunc = (hour, minutes): number => {
   return  Number(`${hour}${minutes}`);
 }
 
-export const buildTimeText: TimeFunc = (hour, minutes): string => {
+const buildTimeText: TimeFunc = (hour, minutes): string => {
   if (minutes < 10) {
     return `${hour}시 0${minutes}분`;
   }
   return `${hour}시 ${minutes}분`;
 }
+
 buildTimeStamp(12, 33); //1233
 buildTimeText(12, 33); //12시 33분
 ```
 반환 타입을 제외하고 동일한 형식의 함수를 정의했습니다. 이것은 특정 콜백 함수를 받는 함수를 구현할 때 그 유용성이 더 빛을 발합니다.
+
 ```ts
 const buildTime = (timeText: string, cb: TimeFunc) => {
   const hour: number = Number(timeText.split(":")[0]);
@@ -247,7 +250,7 @@ class BMWCar implements Movable {
   constructor(velocity) {
     this.velocity = velocity;
   }
-
+  
   move(time: number): Position {
     //... do something
   }
@@ -266,9 +269,10 @@ TypeScript Official Document에 `Interfaces describe the public side of the clas
 </br>
 
 ### 마무리
-인터페이스를 통해 보다 세밀한 구조 설계와 추상화가 가능해졌습니다.
+인터페이스를 통해 보다 세밀한 구조 설계와 추상화가 가능해졌습니다. 해당 포스팅 외 다른 타입스크립트 포스팅은 [여기](https://github.com/JaeYeopHan/typescript_tutorial_docs)에서 보실 수 있으며 예제에 사용된 코드는 [여기](https://github.com/JaeYeopHan/typescript_playground)에서 확인하실 수 있습니다.
+감사합니다.
 
-_4. Interface in TypeScript end_
+_3. Interface in TypeScript end_
 
 ### Reference
 [TypeScript Official Document - Interface](https://www.typescriptlang.org/docs/handbook/interfaces.html)
