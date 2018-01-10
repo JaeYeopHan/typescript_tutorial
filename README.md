@@ -7,6 +7,8 @@
 # Intro to TypeScript in 15 minutes
 TypeScript Tutorial 문서를 저장하는 repository 입니다.
 
+#### [TypeScript Playground](https://github.com/JaeYeopHan/typescript_playground)
+
 ### Table of All Contents
 - Basic Types
   - Boolean
