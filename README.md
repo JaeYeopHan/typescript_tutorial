@@ -1529,12 +1529,7 @@ TypeScript의 단순한 문법을 조금 넘어서 어떻게 Type Checking이 �
 
 ### Reference
 - [TypeScript Deep Dive](https://www.gitbook.com/book/basarat/typescript)
-- [TypeScript Official Document - Basic Types](https://www.typescriptlang.org/docs/handbook/basic-types.html)
-- [TypeScript Official Document - Function](https://www.typescriptlang.org/docs/handbook/functions.html)
-- [TypeScript Official Document - Interface](https://www.typescriptlang.org/docs/handbook/interfaces.html)
-- [TypeScript Official Document - Generics](https://www.typescriptlang.org/docs/handbook/generics.html)
-- [TypeScript Official Document - Class](https://www.typescriptlang.org/docs/handbook/classes.html)
-- [TypeScript Official Document - Generics](https://www.typescriptlang.org/docs/handbook/generics.html)
+- [TypeScript Official Document](https://www.typescriptlang.org/docs/handbook)
 - https://github.com/wycats/javascript-decorators
 - https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841
 - https://www.sitepoint.com/javascript-decorators-what-they-are/
@@ -1545,7 +1540,6 @@ TypeScript의 단순한 문법을 조금 넘어서 어떻게 Type Checking이 �
 - [TypeScript Official Document - Type Compatibility](https://www.typescriptlang.org/docs/handbook/type-compatibility.html)
 - [Golang으로 만나보는 duck typing](http://www.popit.kr/golang%EC%9C%BC%EB%A1%9C-%EB%A7%8C%EB%82%98%EB%B3%B4%EB%8A%94-duck-typing/)
 - [Type Systems: Structural vs Nominal typing explained](https://medium.com/@thejameskyle/type-systems-structural-vs-nominal-typing-explained-56511dd969f4)
-- [TypeScript Deep dive - Type Guard](https://basarat.gitbooks.io/typescript/docs/types/typeGuard.html)
 
 </br>
 
