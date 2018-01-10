@@ -249,7 +249,7 @@ lengthOfGreet = (greet as string).length;
 
 </br>
 
-<sup>[(목차로 돌아가기)](#-intro-to-typescript-in-15-minutes)</sup>
+<sup>[(목차로 돌아가기)](#intro-to-typescript-in-15-minutes)</sup>
 
 ---
 ---
@@ -519,7 +519,7 @@ TypeScript에서 사용하는 클래스에 대해 알아봤습니다. 잘 사용
 
 </br>
 
-<sup>[(목차로 돌아가기)](#-intro-to-typescript-in-15-minutes)</sup>
+<sup>[(목차로 돌아가기)](#intro-to-typescript-in-15-minutes)</sup>
 
 ---
 ---
@@ -668,7 +668,7 @@ TypeScript 좀 더 안정성 있는, 간결한, 가독성이 좋은 함수를 �
 
 </br>
 
-<sup>[(목차로 돌아가기)](#-intro-to-typescript-in-15-minutes)</sup>
+<sup>[(목차로 돌아가기)](#intro-to-typescript-in-15-minutes)</sup>
 
 ---
 ---
@@ -946,7 +946,7 @@ _end_
 
 </br>
 
-<sup>[(목차로 돌아가기)](#-intro-to-typescript-in-15-minutes)</sup>
+<sup>[(목차로 돌아가기)](#intro-to-typescript-in-15-minutes)</sup>
 
 ---
 ---
@@ -1243,7 +1243,7 @@ target을 ES5로 지정해야 제대로 된 데코레이터를 사용할 수 있
 
 </br>
 
-<sup>[(목차로 돌아가기)](#-intro-to-typescript-in-15-minutes)</sup>
+<sup>[(목차로 돌아가기)](#intro-to-typescript-in-15-minutes)</sup>
 
 ---
 ---
@@ -1518,7 +1518,7 @@ TypeScript의 단순한 문법을 조금 넘어서 어떻게 Type Checking이 �
 
 </br>
 
-<sup>[(목차로 돌아가기)](#-intro-to-typescript-in-15-minutes)</sup>
+<sup>[(목차로 돌아가기)](#intro-to-typescript-in-15-minutes)</sup>
 
 ---
 ---
