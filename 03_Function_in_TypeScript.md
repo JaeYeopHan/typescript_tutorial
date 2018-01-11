@@ -1,4 +1,4 @@
-# [TS] 3. Function in TypeScri
+# [TS] 3. Function in TypeScript
 TypeScript에서 함수를 정의하는데 있어서 몇 가지 추가된 기능에 대해 살펴봅니다.
 
 #### Table of Contents
